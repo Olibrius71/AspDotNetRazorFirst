@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\images\\fonds\\page-principale-content.png",
+      "PackagePath": "staticwebassets\\images\\fonds\\page-principale-content.png"
+    },
+    {
       "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

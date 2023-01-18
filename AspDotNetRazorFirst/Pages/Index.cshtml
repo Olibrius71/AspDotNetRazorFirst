@@ -4,7 +4,13 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="container-fluid" id="overall-container">
+    <section class="container-fluid description-container text-center">
+        <h1 class="display-4 text-light">Vous avez actuellement sauvegardé @Model.NbFilms films</h1>
+        <p class="text-light">Voir la section du bas pour en rajouter</p>
+    </section>
+    
+    <section class="container-fluid main-container">
+        <div class="text-light">Test</div>
+    </section>
+</section>

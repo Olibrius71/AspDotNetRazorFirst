@@ -11,8 +11,15 @@ public class IndexModel : PageModel
     {
         _logger = logger;
     }
+    
+    
+    public int? NbFilms { get; set; }
 
     public void OnGet()
     {
+        if (NbFilms is null)
+        {
+            NbFilms = 0;
+        }
     }
 }
