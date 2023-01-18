@@ -14,6 +14,7 @@ public class IndexModel : PageModel
     
     
     public int? NbFilms { get; set; }
+    
 
     public void OnGet()
     {
