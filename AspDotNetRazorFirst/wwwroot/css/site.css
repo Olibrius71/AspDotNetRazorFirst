@@ -51,6 +51,18 @@ body {
     background-image: url('../images/fonds/page-principale-content.png');
     background-size: cover;
     height: 100vh;
+
+}
+
+#button-container {
+    width: 100%;
+    align-items: start;
+    
+    background-color: var(--bs-gray-300);
+}
+
+.btn {
+    width: 9%;
 }
 
 
