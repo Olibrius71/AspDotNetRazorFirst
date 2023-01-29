@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AspDotNetRazorFirst.wwwroot.entities;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AspDotNetRazorFirst.Pages;
@@ -15,6 +16,7 @@ public class IndexModel : PageModel
     
     public int? NbFilms { get; set; }
     
+    public IEnumerable<Movie> Movies { get; set; }
 
     public void OnGet()
     {

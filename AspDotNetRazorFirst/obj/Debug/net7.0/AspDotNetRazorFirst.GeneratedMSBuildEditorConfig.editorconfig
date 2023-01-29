@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Anis\Documents\Rider_bouffon\AspDotNetRazorFirst\AspDotNetRazorFirst
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Anis/Documents/Rider_bouffon/AspDotNetRazorFirst/AspDotNetRazorFirst/Pages/Display.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlzcGxheS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Anis/Documents/Rider_bouffon/AspDotNetRazorFirst/AspDotNetRazorFirst/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

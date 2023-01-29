@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ey3KcAuIBd2VF6h8FE+EgN7WdlyqQQudHIJV7zwyXao=",
+  "Hash": "KiJeYcMdZjn+YLSM9vDUWK8mtJapKJUa3TA1xqVtzmU=",
   "Source": "AspDotNetRazorFirst",
   "BasePath": "_content/AspDotNetRazorFirst",
   "Mode": "Default",
@@ -66,6 +66,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\database\\dbModels\\MovieController.cs",
+      "SourceId": "AspDotNetRazorFirst",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\",
+      "BasePath": "_content/AspDotNetRazorFirst",
+      "RelativePath": "database/dbModels/MovieController.cs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\database\\dbModels\\MovieController.cs"
+    },
+    {
+      "Identity": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\entities\\Movie.cs",
+      "SourceId": "AspDotNetRazorFirst",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\",
+      "BasePath": "_content/AspDotNetRazorFirst",
+      "RelativePath": "entities/Movie.cs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\entities\\Movie.cs"
     },
     {
       "Identity": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\favicon.ico",

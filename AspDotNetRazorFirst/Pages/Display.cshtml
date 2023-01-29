@@ -1,0 +1,37 @@
+@page
+@model DisplayModel
+
+@{
+    ViewData["Title"] = "Display";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Display</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].MovieName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Movie) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.MovieId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.MovieId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.MovieId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
