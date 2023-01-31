@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - AspDotNetRazorFirst</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/@(nameof(AspDotNetRazorFirst)).styles.css" />
 </head>
 <body>
 <header>
@@ -32,7 +33,7 @@
         </div>
     </nav>
 </header>
-<div class="container mt-0 mb-0" style="" >
+<div class="" style="" >
     <main role="main" style="" class="">
         @RenderBody()
     </main>

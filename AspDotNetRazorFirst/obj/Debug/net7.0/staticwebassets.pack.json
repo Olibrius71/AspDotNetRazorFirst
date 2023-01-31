@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\images\\fonds\\fond-affichage.jpg",
+      "PackagePath": "staticwebassets\\images\\fonds\\fond-affichage.jpg"
+    },
+    {
       "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\images\\fonds\\page-principale-content.png",
       "PackagePath": "staticwebassets\\images\\fonds\\page-principale-content.png"
     },

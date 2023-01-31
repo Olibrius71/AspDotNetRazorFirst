@@ -6,32 +6,53 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h1>Display</h1>
+<section class="container-fluid overall-container">
+    <section class="container-fluid description-container text-center">
+        <h1 class="display-4 text-light">Vous avez actuellement sauvegardé  Model.NbFilms films</h1>
+        <p class="text-light">Voir la section du bas pour en rajouter</p>
+    </section>
+    
+    <section class="container-fluid main-container p-0">
+    <div id="button-container" class="row mx-0">
+        <button id="add-button" class="btn btn-primary m-2">AJOUTER</button>
+        <button id="del-button" class="btn btn-primary m-2">SUPPRIMER</button>
+    </div>
+        <section class="container-fluid movies-container" style="background: url('@Url.Content("~/images/fonds/fond-affichage.jpg")');">
+            @foreach (var item in Model.Movie)
+            {
+                <div class="movie-div">
+                    <div class="movie-name">@Html.DisplayFor(modelItem => item.MovieName)</div>
+                </div>
+            }    
+        <!--
+        <p>
+            <a asp-page="Create">Create New</a>
+        </p>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>
+                    Html.DisplayNameFor(model => model.Movie[0].MovieName)
+                </th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            foreach (var item in Model.Movie) {
+            <tr>
+                <td>Html.DisplayFor(modelItem => item.MovieName)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="item.MovieId">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="item.MovieId">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="item.MovieId">Delete</a>
+                </td>
+            </tr>
+            }
+            </tbody>
+        </table>
+        -->
+        </section>
+    </section>
+</section>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Movie[0].MovieName)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Movie) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MovieName)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.MovieId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.MovieId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.MovieId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>

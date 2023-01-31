@@ -27,4 +27,10 @@
       <Compile Include="wwwroot\entities\Movie.cs" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Pages\index.css">
+        <DependentUpon>Display.cshtml</DependentUpon>
+      </None>
+    </ItemGroup>
+
 </Project>
