@@ -3,21 +3,22 @@
 @{
     ViewData["Title"] = "Home page";
 }
+@section css {
+    <link href="@Url.Content("~/css/Index.css")" rel="stylesheet"/>
+}
 
 <section class="container-fluid overall-container">
     <section class="container-fluid description-container text-center">
-        <h1 class="display-4 text-light">Vous avez actuellement sauvegardé @Model.NbFilms films</h1>
-        <p class="text-light">Voir la section du bas pour en rajouter</p>
+        <h1 class="display-4 text-light"><span class="text-gradient">GESTIONNAIRE DE FILMS</span></h1>
+        <p class="description text-light">Ce site vous donne la possibilité de sauvegarder des films qui pourrait vous plaire en les stockant dans une base de données, vous pouvez ajouter des films: pour l'instant, la seule information est le nom du film mais nous en rajouterons. Ces fonctionnalités, celles de suppression et d'autres encore sont encore en cours de développement  </p>
     </section>
     
-    <section class="container-fluid main-container p-0">
-        <div id="button-container" class="row mx-0">
-            <button id="add-button" class="btn btn-primary m-2">AJOUTER</button>
-            <button id="del-button" class="btn btn-primary m-2">SUPPRIMER</button>
-        </div>
-        <section id="movie-container">
-        
-            
-        </section>
+    <section class="container-fluid links-container py-4">
+        <a class="link-a" asp-page="/Display">
+            <div class="link-div">
+                <div class="link-name">Affichage</div>
+                <div class="link-description">Voir la liste de tous les films et leurs attributs stockés et pouvoir les supprimer et en rajouter (en développement)</div>
+            </div>
+        </a>
     </section>
 </section>

@@ -21,11 +21,15 @@ namespace AspDotNetRazorFirst.Pages
 
         public IList<Movie> Movie { get;set; } = default!;
 
+        public int NbFilms { get; set; } = 0;
+
         public async Task OnGetAsync()
         {
             if (_context.Movies != null)
             {
                 Movie = await _context.Movies.ToListAsync();
+
+                NbFilms = Movie.Count;
             }
         }
     }

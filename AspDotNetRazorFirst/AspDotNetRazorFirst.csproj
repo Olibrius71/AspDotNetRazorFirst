@@ -31,6 +31,7 @@
       <None Update="Pages\index.css">
         <DependentUpon>Display.cshtml</DependentUpon>
       </None>
+      <None Include="wwwroot\css\Index.css" />
     </ItemGroup>
 
 </Project>

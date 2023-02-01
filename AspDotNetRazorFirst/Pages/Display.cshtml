@@ -5,17 +5,19 @@
     ViewData["Title"] = "Display";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
+@section css {
+    <link href="@Url.Content("~/css/Display.css")" rel="stylesheet"/>
+}
 
 <section class="container-fluid overall-container">
     <section class="container-fluid description-container text-center">
-        <h1 class="display-4 text-light">Vous avez actuellement sauvegardé  Model.NbFilms films</h1>
-        <p class="text-light">Voir la section du bas pour en rajouter</p>
+        <h1 class="display-4 text-light">Vous avez actuellement sauvegardé  @Model.NbFilms films</h1>
+        <p class="text-light text-center description">Voir la section du bas pour en rajouter</p>
     </section>
     
     <section class="container-fluid main-container p-0">
     <div id="button-container" class="row mx-0">
-        <button id="add-button" class="btn btn-primary m-2">AJOUTER</button>
-        <button id="del-button" class="btn btn-primary m-2">SUPPRIMER</button>
+        <button id="add-button" class="btn btn-primary m-3">AJOUTER UN FILM</button>
     </div>
         <section class="container-fluid movies-container" style="background: url('@Url.Content("~/images/fonds/fond-affichage.jpg")');">
             @foreach (var item in Model.Movie)

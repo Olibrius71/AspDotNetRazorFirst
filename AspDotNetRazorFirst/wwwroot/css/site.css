@@ -36,36 +36,48 @@ body {
 }
 
 .main-container {
-    
     background-image: url('../images/fonds/page-principale-content.png');
     background-size: cover;
     height: 100vh;
-
 }
-
 
 
 
 .description-container {
-    background-color: blue;
-    height: 20vh;
+    /*background-color: #1e2125;*/
+    background: linear-gradient(110deg, rgba(0,48,255,1) 4%, rgba(0,0,0,1) 11%, rgba(0,0,0,1) 89%, rgba(0,48,255,1) 96%);
+    height: 30vh;
     width: 100%;
-}
-
-
-
-
-
-#button-container {
-    width: 100%;
-    align-items: start;
+    justify-content: space-around;
     
-    background-color: var(--bs-gray-300);
+    padding: 2vh 9vw 2vh 9vw;
+}
+.description-container > p::before {
+    content: "";
+    background-image: url("../images/objects/blue-arrow.png");
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    margin-left: -22px;
+    margin-top: 5px;
 }
 
-.btn {
-    width: 9%;
+.description {
+    text-align: left;
+    font-size: large;
 }
+
+.text-gradient {
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to left, #38b2ac, #0bc5ea);;
+}
+
+
+
+
 
 
 
