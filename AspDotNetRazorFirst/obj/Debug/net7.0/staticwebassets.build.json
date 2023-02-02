@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cHT74i33aZEAM4q4w7ssMf8JHCg5zmE5GmllEDhrCiU=",
+  "Hash": "yeqRQvcncxdqlJOu3zBIQY0nqbocWPXuMY578GNxhPQ=",
   "Source": "AspDotNetRazorFirst",
   "BasePath": "_content/AspDotNetRazorFirst",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\AspDotNetRazorFirst.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\css\\Create.css",
+      "SourceId": "AspDotNetRazorFirst",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\",
+      "BasePath": "_content/AspDotNetRazorFirst",
+      "RelativePath": "css/Create.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Create.css"
     },
     {
       "Identity": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\css\\Display.css",

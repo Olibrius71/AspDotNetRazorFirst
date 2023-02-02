@@ -1,0 +1,14 @@
+body {
+    color: ghostwhite;
+}
+
+form {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main-container {
+    margin: 5vh 7vw 4vh 7vw;
+}

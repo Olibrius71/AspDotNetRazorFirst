@@ -1,0 +1,36 @@
+@page
+@model AspDotNetRazorFirst.Pages.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+@section css {
+    <link href="@Url.Content("~/css/Create.css")" rel="stylesheet"/>
+}
+
+<div class="main-container">
+    <h1>Ajout d'un Film</h1>
+    
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Movie.MovieName" class="name-label control-label"></label>
+                    <input asp-for="Movie.MovieName" class="form-control" />
+                    <span asp-validation-for="Movie.MovieName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+

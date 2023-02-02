@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\AspDotNetRazorFirst.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\css\\Create.css",
+      "PackagePath": "staticwebassets\\css\\Create.css"
+    },
+    {
       "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\css\\Display.css",
       "PackagePath": "staticwebassets\\css\\Display.css"
     },

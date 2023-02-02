@@ -17,9 +17,9 @@
     
     <section class="container-fluid main-container p-0">
     <div id="button-container" class="row mx-0">
-        <button id="add-button" class="btn btn-primary m-3">AJOUTER UN FILM</button>
+        <button id="add-button" class="btn btn-primary m-3" onclick="location.href='@Url.Page("/Create")'">AJOUTER UN FILM</button>
     </div>
-        <section class="container-fluid movies-container" style="background: url('@Url.Content("~/images/fonds/fond-affichage.jpg")');">
+        <section class="container-fluid movies-container">
             @foreach (var item in Model.Movie)
             {
                 <div class="movie-div">
