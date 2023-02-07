@@ -1,20 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using AspDotNetRazorFirst;
 using AspDotNetRazorFirst.wwwroot.entities;
 
 namespace AspDotNetRazorFirst.Pages
 {
     public class CreateModel : PageModel
     {
-        private readonly AspDotNetRazorFirst.MovieController _context;
+        private readonly MovieController _context;
 
-        public CreateModel(AspDotNetRazorFirst.MovieController context)
+        public CreateModel(MovieController context)
         {
             _context = context;
         }
@@ -32,7 +26,7 @@ namespace AspDotNetRazorFirst.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Movies == null || Movie == null)
+            if (!ModelState.IsValid || _context.Movies == null)
             {
                 return Page();
             }
@@ -41,6 +35,8 @@ namespace AspDotNetRazorFirst.Pages
             Movie.MovieId = lastId + 1;
             _context.Movies.Add(Movie);
             await _context.SaveChangesAsync();
+
+            WebScraper webScraper = new WebScraper("https://www.tf1.fr");
 
             return RedirectToPage("./Display");
         }
