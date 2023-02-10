@@ -1,4 +1,5 @@
-﻿using AngleSharp;
+﻿using System.Text.RegularExpressions;
+using AngleSharp;
 using AngleSharp.Dom;
 
 
@@ -9,23 +10,60 @@ public class WebScraper
     private static IBrowsingContext _browsingContext = BrowsingContext.New(Configuration.Default.WithDefaultLoader());
     private static IDocument document;
     
-    private string SearchUrl { get; set; }
+    private string SearchUrl { get; set; } = "https://www.themoviedb.org/search?language=fr&query=";
 
-    public WebScraper(string searchUrl)
+    public WebScraper(string movieName)
     {
-        SearchUrl = searchUrl;
+        string[] movieWords = movieName.Split(" ");
+        foreach (var word in movieWords)
+        {
+            string finalWord = Regex.Replace(word, @"[#&,$¤£;:]", "");
+            SearchUrl += finalWord;
+            if (Array.IndexOf(movieWords,word) != movieWords.Length - 1)
+            {
+                SearchUrl += "+";
+            }
+        }
+        /*
+        Task.Run(async () =>
+        {
+            document = await _browsingContext.OpenAsync(SearchUrl);
+        }).Wait();
+        */
         GetHtml();
     }
 
     private async void GetHtml()
     {
         document = await _browsingContext.OpenAsync(SearchUrl);
-        var cells = document.QuerySelectorAll(".Header_category_c4fHU");
-        var titles = cells.Select(m => m.TextContent).ToList();
-        foreach (var titre in titles)
-        {
-            Console.WriteLine(titre);
-        }
+        var cells = document.QuerySelectorAll(".results.flex > .card .release_date");
+        string date = cells.Select(m => m.TextContent).ToList().First();
+
+        Console.WriteLine(date);
+    }
+
+    public string GetDate()
+    { 
+        var cells = document.QuerySelectorAll(".results.flex > .card > .wrapper > .details > .wrapper > .title > .release_date");
+        string date = cells.Select(m => m.TextContent).ToList().First();
+
+        return date;
+    }
+
+    public string GetTitle()
+    {
+        var cells = document.QuerySelectorAll(".results.flex > .card > .wrapper > .details > .wrapper > .title > div > a.result > h2");
+        string title = cells.Select(m => m.TextContent).ToList().First();
+
+        return title;
+    }
+
+    public string GetDescription()
+    {
+        var cells = document.QuerySelectorAll(".results.flex > .card > .wrapper > .details > .overview > p");
+        string description = cells.Select(m => m.TextContent).ToList().First();
+
+        return description;
     }
 
 }

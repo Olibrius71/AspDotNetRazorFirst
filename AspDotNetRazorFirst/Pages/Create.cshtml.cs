@@ -33,10 +33,21 @@ namespace AspDotNetRazorFirst.Pages
 
             int lastId = _context.Movies.Max(item => item.MovieId);
             Movie.MovieId = lastId + 1;
+            
+
+            WebScraper webScraper = new WebScraper(Movie.MovieName);
+            
+            /*
+            string finalMovieName = webScraper.GetTitle();
+            string movieDate = webScraper.GetDate();
+            string movieDesc = webScraper.GetDescription();
+
+            Console.WriteLine(finalMovieName + " " + movieDate + " " + movieDesc);
+            
+            Movie.MovieName = finalMovieName;
+            */
             _context.Movies.Add(Movie);
             await _context.SaveChangesAsync();
-
-            WebScraper webScraper = new WebScraper("https://www.tf1.fr");
 
             return RedirectToPage("./Display");
         }
