@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\images\\avengers-endgame.jpg",
+      "PackagePath": "staticwebassets\\images\\avengers-endgame.jpg"
+    },
+    {
       "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\images\\fonds\\fond-affichage.jpg",
       "PackagePath": "staticwebassets\\images\\fonds\\fond-affichage.jpg"
     },

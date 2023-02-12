@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yeqRQvcncxdqlJOu3zBIQY0nqbocWPXuMY578GNxhPQ=",
+  "Hash": "WjDPXpRHkn3igiQ2+HuTe+zMwI8cDVXG/6wA7LTBfbM=",
   "Source": "AspDotNetRazorFirst",
   "BasePath": "_content/AspDotNetRazorFirst",
   "Mode": "Default",
@@ -168,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\images\\avengers-endgame.jpg",
+      "SourceId": "AspDotNetRazorFirst",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\",
+      "BasePath": "_content/AspDotNetRazorFirst",
+      "RelativePath": "images/avengers-endgame.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\avengers-endgame.jpg"
     },
     {
       "Identity": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\images\\fonds\\fond-affichage.jpg",

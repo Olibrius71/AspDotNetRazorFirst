@@ -12,48 +12,27 @@
 <section class="container-fluid overall-container">
     <section class="container-fluid description-container text-center">
         <h1 class="display-4 text-light">Vous avez actuellement sauvegardé  @Model.NbFilms films</h1>
-        <p class="text-light text-center description">Voir la section du bas pour en rajouter</p>
+        <p class="text-light text-center description">Voir le bouton Ajouter un film pour en rajouter</p>
+        <p class="text-light text-center description">Cliquez sur le bouton informations d'un film pour avoir plus d'informations à sont sujet</p>
+        <p class="text-light text-center description">Cliquez sur le bouton supprimer du film que vous voulez supprimer</p>
     </section>
     
     <section class="container-fluid main-container p-0">
     <div id="button-container" class="row mx-0">
-        <button id="add-button" class="btn btn-primary m-3" onclick="location.href='@Url.Page("/Create")'">AJOUTER UN FILM</button>
+        <button id="add-button" class="btn btn-primary m-3"><a asp-page="Create">AJOUTER UN FILM</a></button>
     </div>
         <section class="container-fluid movies-container">
             @foreach (var item in Model.Movie)
             {
                 <div class="movie-div">
                     <div class="movie-name">@Html.DisplayFor(modelItem => item.MovieName)</div>
+                    <img src="images/avengers-endgame.jpg" class="movie-image"/>
+                    <div class="movie-buttons-container">
+                        <button id="movie-information-button" class="btn btn-primary px-2"><a asp-page="./Details" asp-route-id="item.MovieId">INFORMATIONS</a></button>
+                        <button id="movie-delete-button" class="btn btn-danger btn px-2"><a asp-page="./Delete" asp-route-id="item.MovieId">SUPPRIMER</a></button>
+                    </div>
                 </div>
-            }    
-        <!--
-        <p>
-            <a asp-page="Create">Create New</a>
-        </p>
-        <table class="table">
-            <thead>
-            <tr>
-                <th>
-                    Html.DisplayNameFor(model => model.Movie[0].MovieName)
-                </th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            foreach (var item in Model.Movie) {
-            <tr>
-                <td>Html.DisplayFor(modelItem => item.MovieName)
-                </td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="item.MovieId">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="item.MovieId">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="item.MovieId">Delete</a>
-                </td>
-            </tr>
             }
-            </tbody>
-        </table>
-        -->
         </section>
     </section>
 </section>
