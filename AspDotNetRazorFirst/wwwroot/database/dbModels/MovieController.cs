@@ -24,6 +24,8 @@ public class MovieController: DbContext
     {
         modelBuilder.Entity<Movie>()
             .HasKey(m => m.MovieId);
+
+        modelBuilder.Entity<Movie>().Property(m => m.MovieName).IsRequired();
     }
     
 

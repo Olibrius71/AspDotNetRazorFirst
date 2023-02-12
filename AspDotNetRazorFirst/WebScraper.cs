@@ -24,27 +24,16 @@ public class WebScraper
                 SearchUrl += "+";
             }
         }
-        /*
-        Task.Run(async () =>
-        {
-            document = await _browsingContext.OpenAsync(SearchUrl);
-        }).Wait();
-        */
-        GetHtml();
     }
 
-    private async void GetHtml()
+    public async Task GetHtml()
     {
         document = await _browsingContext.OpenAsync(SearchUrl);
-        var cells = document.QuerySelectorAll(".results.flex > .card .release_date");
-        string date = cells.Select(m => m.TextContent).ToList().First();
-
-        Console.WriteLine(date);
     }
 
     public string GetDate()
     { 
-        var cells = document.QuerySelectorAll(".results.flex > .card > .wrapper > .details > .wrapper > .title > .release_date");
+        var cells = document.QuerySelectorAll(".results.flex > .card .release_date");
         string date = cells.Select(m => m.TextContent).ToList().First();
 
         return date;

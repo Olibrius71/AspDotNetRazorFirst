@@ -1,3 +1,4 @@
+using System.Globalization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using AspDotNetRazorFirst.wwwroot.entities;
@@ -26,26 +27,23 @@ namespace AspDotNetRazorFirst.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid || _context.Movies == null)
-            {
-                return Page();
-            }
-
-            int lastId = _context.Movies.Max(item => item.MovieId);
-            Movie.MovieId = lastId + 1;
             
-
             WebScraper webScraper = new WebScraper(Movie.MovieName);
+            await webScraper.GetHtml();
             
-            /*
             string finalMovieName = webScraper.GetTitle();
             string movieDate = webScraper.GetDate();
             string movieDesc = webScraper.GetDescription();
-
-            Console.WriteLine(finalMovieName + " " + movieDate + " " + movieDesc);
+            
             
             Movie.MovieName = finalMovieName;
-            */
+            if (movieDate[0] == ' ')  // If the number of the day is below 10, it will throw an error without this
+            {
+                movieDate = "0" + movieDate.Substring(1);
+            }
+            Movie.MovieDate = DateTime.ParseExact(movieDate,"dd MMMM yyyy",CultureInfo.CurrentCulture);
+            Movie.MovieDesc = movieDesc;
+            
             _context.Movies.Add(Movie);
             await _context.SaveChangesAsync();
 
