@@ -14,7 +14,7 @@
     
     <hr />
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-5">
             <form method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
@@ -22,6 +22,7 @@
                     <input asp-for="Movie.MovieName" class="form-control" />
                     <span asp-validation-for="Movie.MovieName" class="text-danger"></span>
                 </div>
+                <div id="create-information" class="description text-light my-4"> La date de sortie du film et sa description seront générées automatiquement. De plus, Si vous faites des fautes d'orthographes dans le nom, ce n'est pas un problème, le film sera quand même détecté.</div>
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-primary" />
                 </div>
@@ -29,8 +30,3 @@
         </div>
     </div>
 </div>
-
-<div>
-    <a asp-page="Index">Back to List</a>
-</div>
-
