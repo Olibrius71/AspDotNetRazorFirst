@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\Create.css"
     },
     {
+      "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\css\\Delete.css",
+      "PackagePath": "staticwebassets\\css\\Delete.css"
+    },
+    {
       "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\css\\Display.css",
       "PackagePath": "staticwebassets\\css\\Display.css"
     },

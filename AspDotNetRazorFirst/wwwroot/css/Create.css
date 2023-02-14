@@ -9,6 +9,11 @@ form {
     justify-content: space-around;
 }
 
-.main-container {
+.create-overall-container {
     margin: 5vh 7vw 4vh 7vw;
+}
+
+.create-main-container {
+    margin-top: 17vh;
+    margin-bottom: 22vh;
 }

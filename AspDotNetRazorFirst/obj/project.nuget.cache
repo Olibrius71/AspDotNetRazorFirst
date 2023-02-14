@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DaVtVluJKxGXFxLeQrHPOn5DMqEaeyYHwH3qENqyEKi+FaYyLrseiaFSc4uuFMsFaFKe+UOAGwagcDaocOlPqw==",
+  "dgSpecHash": "rjlPweOXYpeM98Te67DN+HKFblAaffjUbYoLaxYEk8pzdfH8nxLIG99l5KuiATTj9JRT3d4sUVPa5ajYy4bMXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\AspDotNetRazorFirst.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\Anis\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Anis\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Anis\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Anis\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.0\\microsoft.aspnetcore.mvc.razor.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Anis\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\7.0.3\\microsoft.aspnetcore.mvc.razor.runtimecompilation.7.0.3.nupkg.sha512",
     "C:\\Users\\Anis\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "C:\\Users\\Anis\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Anis\\.nuget\\packages\\microsoft.build\\17.3.2\\microsoft.build.17.3.2.nupkg.sha512",

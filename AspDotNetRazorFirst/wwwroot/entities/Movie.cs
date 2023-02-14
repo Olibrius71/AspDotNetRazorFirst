@@ -23,4 +23,7 @@ public class Movie
     [Column("movie_description")]
     public string MovieDesc { get; set; } 
     
+    [Column("movie_image_data")]
+    public byte[]? MovieImageData { get; set; }
+    
 }

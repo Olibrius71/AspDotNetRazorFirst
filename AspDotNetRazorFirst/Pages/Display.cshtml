@@ -6,7 +6,7 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 @section css {
-    <link href="@Url.Content("~/css/Display.css")" rel="stylesheet"/>
+    <link href="@Url.Content("~/css/Display.css")" rel="stylesheet" asp-append-version="true"/>
 }
 
 <section class="container-fluid overall-container">
@@ -19,19 +19,21 @@
     
     <section class="container-fluid main-container p-0">
     <div id="button-container" class="row mx-0">
-        <button id="add-button" class="btn btn-primary m-3"><a asp-page="Create">AJOUTER UN FILM</a></button>
+        <button id="add-button" class="btn m-3 px-2"><a asp-page="Create">AJOUTER UN FILM</a></button>
     </div>
         <section class="container-fluid movies-container">
-            @foreach (var item in Model.Movie)
+            @if (Model.NbFilms != 0)
             {
-                <div class="movie-div">
-                    <div class="movie-name">@Html.DisplayFor(modelItem => item.MovieName)</div>
-                    <img src="images/avengers-endgame.jpg" class="movie-image"/>
-                    <div class="movie-buttons-container">
-                        <button id="movie-information-button" class="btn btn-primary px-2"><a asp-page="./Details" asp-route-id="item.MovieId">INFORMATIONS</a></button>
-                        <button id="movie-delete-button" class="btn btn-danger btn px-2"><a asp-page="./Delete" asp-route-id="item.MovieId">SUPPRIMER</a></button>
+                foreach (var item in Model.Movie) {
+                    <div class="movie-div">
+                        <div class="movie-name">@Html.DisplayFor(modelItem => item.MovieName)</div>
+                        <img src="data:image;base64,@Convert.ToBase64String(item.MovieImageData)" class="movie-image"/>
+                        <div class="movie-buttons-container">
+                            <button id="movie-information-button" class="btn px-2"><a asp-page="Details" asp-route-id="@item.MovieId">INFORMATIONS</a></button>
+                            <button id="movie-delete-button" class="btn red-btn px-2"><a asp-page="Delete" asp-route-id="@item.MovieId">SUPPRIMER</a></button>
+                        </div>
                     </div>
-                </div>
+                }    
             }
         </section>
     </section>

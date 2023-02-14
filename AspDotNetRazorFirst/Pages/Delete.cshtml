@@ -1,0 +1,35 @@
+@page
+@model AspDotNetRazorFirst.Pages.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+@section css {
+    <link href="@Url.Content("~/css/Delete.css")" rel="stylesheet" asp-append-version="true"/>
+}
+
+<h3 class="p-4 mb-4-">Êtes-vous sûr de vouloir supprimer ce film de votre annuaire?</h3>
+<div class="delete-container">
+    <h4 class="text-light">@Model.Movie.MovieName</h4>
+    <hr/>
+    <dl class="row ">
+        <dt class="col-sm-2">
+            Date de Sortie
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Movie.MovieDate.ToString("dd MMMM yyyy")
+        </dd>
+        <dt class="col-sm-2">
+            Synopsis
+        </dt>
+        <dd id="description-paragraph" class="col-sm-10 text-sm-start">
+            @Model.Movie.MovieDesc
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="submit" value="SUPPRIMER" class="btn red-btn px-2"/>
+        <button class="btn ms-4 px-2"><a asp-page="Display">Annuler et Retourner à l'annuaire</a></button>
+    </form>
+</div>

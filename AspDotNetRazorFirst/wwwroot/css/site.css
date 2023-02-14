@@ -44,13 +44,13 @@ body {
 
 .description-container {
     background: linear-gradient(110deg, rgba(0,48,255,1) 4%, rgba(0,0,0,1) 11%, rgba(0,0,0,1) 89%, rgba(0,48,255,1) 96%);
-    height: 30vh;
+    height: auto;
     width: 100%;
     justify-content: space-around;
     
     padding: 2vh 9vw 2vh 9vw;
 }
-.description-container > p::before {
+.description::before {
     content: "";
     background-image: url("../images/objects/blue-arrow.png");
     background-size: 20px 20px;
@@ -65,6 +65,7 @@ body {
 .description {
     text-align: left;
     font-size: large;
+    margin-bottom: 1vh;
 }
 
 .text-gradient {
@@ -74,12 +75,37 @@ body {
 }
 
 
+.btn {
+    padding: 0;
+    width: auto;
+    height: 8vh;
+    font-size: 26px;
+    color: ghostwhite;
 
+    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    /*   box-shadow: 0 0 20px #eee;  */
+    border-radius: 10px;
+    border: 2px solid dimgray;
+}
+.btn:hover {
+    background-position: right center;
+    color: #fff;
+}
+.btn:active {
+    transform: scale(1.11);
+}
 
+.red-btn {
+    align-self: center;
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
+}
 
-
-
-
-
-
-
+a {
+    text-decoration: none;
+    color: ghostwhite;
+}
+a:hover {
+    color: black;
+}

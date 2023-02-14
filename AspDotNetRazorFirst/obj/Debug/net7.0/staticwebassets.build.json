@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WjDPXpRHkn3igiQ2+HuTe+zMwI8cDVXG/6wA7LTBfbM=",
+  "Hash": "BcCVLVHsb7F1HYIAY+d5K44mA0MP/7XMXZ+sMxxGv9w=",
   "Source": "AspDotNetRazorFirst",
   "BasePath": "_content/AspDotNetRazorFirst",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Create.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\css\\Delete.css",
+      "SourceId": "AspDotNetRazorFirst",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\",
+      "BasePath": "_content/AspDotNetRazorFirst",
+      "RelativePath": "css/Delete.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Delete.css"
     },
     {
       "Identity": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\css\\Display.css",

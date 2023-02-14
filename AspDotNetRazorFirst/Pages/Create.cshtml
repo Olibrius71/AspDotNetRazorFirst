@@ -6,14 +6,14 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 @section css {
-    <link href="@Url.Content("~/css/Create.css")" rel="stylesheet"/>
+    <link href="@Url.Content("~/css/Create.css")" rel="stylesheet" asp-append-version="true"/>
 }
 
-<div class="main-container">
+<div class="create-overall-container">
     <h1>Ajout d'un Film</h1>
     
     <hr />
-    <div class="row">
+    <div class="create-main-container row">
         <div class="col-md-5">
             <form method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -22,9 +22,9 @@
                     <input asp-for="Movie.MovieName" class="form-control" />
                     <span asp-validation-for="Movie.MovieName" class="text-danger"></span>
                 </div>
-                <div id="create-information" class="description text-light my-4"> La date de sortie du film et sa description seront générées automatiquement. De plus, Si vous faites des fautes d'orthographes dans le nom, ce n'est pas un problème, le film sera quand même détecté.</div>
+                <div id="create-information" class="description text-light my-5"> La date de sortie du film et sa description seront générées automatiquement. De plus, Si vous faites des fautes d'orthographes dans le nom, ce n'est pas un problème, le film sera quand même détecté.</div>
                 <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <input type="submit" value="Ajouter" class="btn px-2" />
                 </div>
             </form>
         </div>

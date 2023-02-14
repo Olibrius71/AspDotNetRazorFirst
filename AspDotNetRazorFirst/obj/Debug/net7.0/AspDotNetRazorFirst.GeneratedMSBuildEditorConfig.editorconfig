@@ -12,12 +12,16 @@ build_property.RootNamespace = AspDotNetRazorFirst
 build_property.ProjectDir = C:\Users\Anis\Documents\Rider_bouffon\AspDotNetRazorFirst\AspDotNetRazorFirst\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Anis\Documents\Rider_bouffon\AspDotNetRazorFirst\AspDotNetRazorFirst
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/Anis/Documents/Rider_bouffon/AspDotNetRazorFirst/AspDotNetRazorFirst/Pages/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Anis/Documents/Rider_bouffon/AspDotNetRazorFirst/AspDotNetRazorFirst/Pages/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Anis/Documents/Rider_bouffon/AspDotNetRazorFirst/AspDotNetRazorFirst/Pages/Display.cshtml]

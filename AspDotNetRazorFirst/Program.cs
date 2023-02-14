@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 builder.Services.AddDbContext<MovieController>(HostOptions => HostOptions.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 

@@ -18,28 +18,6 @@
     background-color: transparent;
 }
 
-.btn {
-    padding: 0;
-    width: 18%;
-    height: 8vh;
-    font-size: 26px;
-    
-    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%);
-    transition: 0.5s;
-    background-size: 200% auto;
- /*   box-shadow: 0 0 20px #eee;  */
-    border-radius: 10px;
-    border: 2px solid dimgray;
-}
-.btn:hover {
-    background-position: right center;
-    color: #fff;
-}
-.btn:active {
-    transform: scale(1.11);
-}
-
-
 
 .movies-container {
     display: grid;
@@ -115,11 +93,9 @@ a {
 #movie-information-button {
     margin-bottom: 1vh;
     align-self: center;
-    width: 59%;
 }
 
 #movie-delete-button {
-    width: 44%;
     align-self: center;
-    background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%)
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%);
 }

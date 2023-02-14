@@ -1,4 +1,6 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Net;
+using System.Net.Mime;
+using System.Text.RegularExpressions;
 using AngleSharp;
 using AngleSharp.Dom;
 
@@ -9,7 +11,8 @@ public class WebScraper
 {
     private static IBrowsingContext _browsingContext = BrowsingContext.New(Configuration.Default.WithDefaultLoader());
     private static IDocument document;
-    
+
+    private static HttpClient _httpClient = new HttpClient();
     private string SearchUrl { get; set; } = "https://www.themoviedb.org/search?language=fr&query=";
 
     public WebScraper(string movieName)
@@ -41,7 +44,7 @@ public class WebScraper
 
     public string GetTitle()
     {
-        var cells = document.QuerySelectorAll(".results.flex > .card > .wrapper > .details > .wrapper > .title > div > a.result > h2");
+        var cells = document.QuerySelectorAll(".results.flex > .card .details > .wrapper > .title > div > a.result > h2");
         string title = cells.Select(m => m.TextContent).ToList().First();
 
         return title;
@@ -49,10 +52,37 @@ public class WebScraper
 
     public string GetDescription()
     {
-        var cells = document.QuerySelectorAll(".results.flex > .card > .wrapper > .details > .overview > p");
+        var cells = document.QuerySelectorAll(".results.flex > .card .details > .overview > p");
         string description = cells.Select(m => m.TextContent).ToList().First();
 
         return description;
     }
 
+    private string TransformImageSize(string src)
+    {
+        int indexWidth = src.IndexOf("w");
+        src = src.Remove(indexWidth + 1, 2).Insert(indexWidth + 1, "188");
+        int indexHeight = src.IndexOf("h");
+        src = src.Remove(indexHeight + 1, 3).Insert(indexHeight + 1, "282");
+
+        return src;
+    }
+    
+    public async Task<byte[]> GetImage()
+    {
+        var cells = document.QuerySelectorAll(".results.flex > .card img");
+        string src = cells.Select(m => m.Attributes["src"].Value).ToList().First();
+
+        src = TransformImageSize(src);  // L'image est tout le temps format 94x141 (et en changeant l'attribut src on peut l'agrandir)
+        
+        string finalstring = "https://www.themoviedb.org" + src;
+        
+        var imageBytes = await _httpClient.GetByteArrayAsync(finalstring);
+        using (var memoryStream = new MemoryStream())
+        {
+            await memoryStream.WriteAsync(imageBytes,0,imageBytes.Length);
+            return memoryStream.ToArray();
+        }
+    }
+    
 }
