@@ -17,3 +17,7 @@ form {
     margin-top: 17vh;
     margin-bottom: 22vh;
 }
+
+.description {
+    text-align: justify !important;
+}

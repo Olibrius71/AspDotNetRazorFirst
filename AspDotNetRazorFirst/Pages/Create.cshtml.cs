@@ -3,13 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using AspDotNetRazorFirst.wwwroot.entities;
 
+
 namespace AspDotNetRazorFirst.Pages
 {
     public class CreateModel : PageModel
     {
-        private readonly MovieController _context;
+        private readonly MovieContext _context;
 
-        public CreateModel(MovieController context)
+        public CreateModel(MovieContext context)
         {
             _context = context;
         }
@@ -35,6 +36,7 @@ namespace AspDotNetRazorFirst.Pages
             string movieDate = webScraper.GetDate();
             string movieDesc = webScraper.GetDescription();
             byte[] movieImageData = await webScraper.GetImage();
+            string movieType = webScraper.GetType();
             
             Movie.MovieName = finalMovieName;
             if (movieDate[0] == ' ')  // If the number of the day is below 10, it will throw an error without this
@@ -44,6 +46,8 @@ namespace AspDotNetRazorFirst.Pages
             Movie.MovieDate = DateTime.ParseExact(movieDate,"dd MMMM yyyy",CultureInfo.CurrentCulture);
             Movie.MovieDesc = movieDesc;
             Movie.MovieImageData = movieImageData;
+            Movie.MovieType = movieType;
+            
             
             _context.Movies.Add(Movie);
             await _context.SaveChangesAsync();

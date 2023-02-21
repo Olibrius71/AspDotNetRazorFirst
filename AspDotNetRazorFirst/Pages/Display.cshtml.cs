@@ -12,9 +12,9 @@ namespace AspDotNetRazorFirst.Pages
 {
     public class DisplayModel : PageModel
     {
-        private readonly AspDotNetRazorFirst.MovieController _context;
+        private readonly AspDotNetRazorFirst.MovieContext _context;
 
-        public DisplayModel(AspDotNetRazorFirst.MovieController context)
+        public DisplayModel(AspDotNetRazorFirst.MovieContext context)
         {
             _context = context;
         }

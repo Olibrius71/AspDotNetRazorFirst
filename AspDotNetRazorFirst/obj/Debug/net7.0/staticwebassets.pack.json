@@ -25,12 +25,16 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\database\\dbModels\\MovieController.cs",
-      "PackagePath": "staticwebassets\\database\\dbModels\\MovieController.cs"
+      "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\database\\dbModels\\MovieContext.cs",
+      "PackagePath": "staticwebassets\\database\\dbModels\\MovieContext.cs"
     },
     {
       "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\entities\\Movie.cs",
       "PackagePath": "staticwebassets\\entities\\Movie.cs"
+    },
+    {
+      "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\enums\\MovieType.cs",
+      "PackagePath": "staticwebassets\\enums\\MovieType.cs"
     },
     {
       "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\favicon.ico",

@@ -25,8 +25,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Include="wwwroot\database\dbModels\MovieController.cs" />
+      <Compile Include="wwwroot\database\dbModels\MovieContext.cs" />
       <Compile Include="wwwroot\entities\Movie.cs" />
+      <Compile Include="wwwroot\enums\MovieType.cs" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,4 +1,5 @@
 @page
+@using AspDotNetRazorFirst.wwwroot.enums
 @model AspDotNetRazorFirst.Pages.DeleteModel
 
 @{
@@ -9,7 +10,14 @@
     <link href="@Url.Content("~/css/Delete.css")" rel="stylesheet" asp-append-version="true"/>
 }
 
-<h3 class="p-4 mb-4-">Êtes-vous sûr de vouloir supprimer ce film de votre annuaire?</h3>
+@if (Model.Movie.MovieType == MovieType.Movie.ToString())
+{
+    <h3 class="p-4 mb-4-">Êtes-vous sûr de vouloir supprimer ce film de votre annuaire?</h3>
+}
+else {
+    <h3 class="p-4 mb-4-">Êtes-vous sûr de vouloir supprimer cette série de votre annuaire?</h3>
+}
+
 <div class="delete-container">
     <h4 class="text-light">@Model.Movie.MovieName</h4>
     <hr/>

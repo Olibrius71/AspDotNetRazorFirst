@@ -1,7 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.Build.Framework;
-using Microsoft.EntityFrameworkCore;
 
 namespace AspDotNetRazorFirst.wwwroot.entities;
 
@@ -21,9 +19,12 @@ public class Movie
     public DateTime MovieDate { get; set; }
     
     [Column("movie_description")]
-    public string MovieDesc { get; set; } 
+    public string? MovieDesc { get; set; } 
     
     [Column("movie_image_data")]
     public byte[]? MovieImageData { get; set; }
+    
+    [Column("movie_type")]
+    public string? MovieType { get; set; }
     
 }

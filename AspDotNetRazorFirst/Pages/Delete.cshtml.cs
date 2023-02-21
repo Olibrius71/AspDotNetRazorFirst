@@ -13,9 +13,9 @@ namespace AspDotNetRazorFirst.Pages
 {
     public class DeleteModel : PageModel
     {
-        private readonly AspDotNetRazorFirst.MovieController _context;
+        private readonly MovieContext _context;
 
-        public DeleteModel(AspDotNetRazorFirst.MovieController context)
+        public DeleteModel(MovieContext context)
         {
             _context = context;
         }

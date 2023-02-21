@@ -3,6 +3,8 @@ using System.Net.Mime;
 using System.Text.RegularExpressions;
 using AngleSharp;
 using AngleSharp.Dom;
+using AspDotNetRazorFirst.wwwroot.enums;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 
 
 namespace AspDotNetRazorFirst;
@@ -82,6 +84,27 @@ public class WebScraper
         {
             await memoryStream.WriteAsync(imageBytes,0,imageBytes.Length);
             return memoryStream.ToArray();
+        }
+    }
+
+
+    
+    public string GetType()
+    {
+        var cells = document.QuerySelectorAll("#search_menu_scroller > ul > li");
+        var selectedCategory = cells.First(categ => categ.ClassList.Contains("selected")); // HasAttribute("Selected"));
+             
+        string selectedCategoryName = selectedCategory.ChildNodes.OfType<IElement>().Select(m => m.TextContent).First();
+        
+        
+        switch (selectedCategoryName)
+        {
+            case "Films":
+                return MovieType.Movie.ToString();
+            case "Émissions télévisées":
+                return MovieType.Series.ToString();
+            default:
+                throw new Exception("Erreur pour trouver le type, selectedcatname= "+ selectedCategoryName);
         }
     }
     
