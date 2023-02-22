@@ -11,16 +11,17 @@
 
 <section class="container-fluid overall-container">
     <section class="container-fluid description-container text-center">
-        <h1 class="display-4 text-light">Vous avez actuellement sauvegardé  @Model.NbFilms films</h1>
+        <h1 class="display-4 text-light">Vous avez actuellement sauvegardé  @Model.NbFilms films et @Model.NbSeries séries</h1>
         <p class="text-light text-center description">Voir le bouton Ajouter un film pour en rajouter</p>
         <p class="text-light text-center description">Cliquez sur le bouton informations d'un film pour avoir plus d'informations à sont sujet</p>
         <p class="text-light text-center description">Cliquez sur le bouton supprimer du film que vous voulez supprimer</p>
     </section>
     
     <section class="container-fluid main-container p-0">
-    <div id="button-container" class="row mx-0">
-        <button id="add-button" class="btn m-3 px-2"><a asp-page="Create">AJOUTER UN FILM</a></button>
-    </div>
+        <div id="button-container" class="row mx-0">
+            <button id="add-button" class="btn m-3 px-2"><a asp-page="Create">AJOUTER UN FILM</a></button>
+
+        </div>
         <section class="container-fluid movies-container">
             @if (Model.NbFilms != 0)
             {
@@ -38,4 +39,3 @@
         </section>
     </section>
 </section>
-

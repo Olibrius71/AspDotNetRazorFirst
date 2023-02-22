@@ -1,0 +1,15 @@
+﻿h3, dl, dt, dd {
+    color: ghostwhite;
+}
+
+hr {
+    color: ghostwhite;
+}
+
+.delete-container {
+    padding: 3rem 15vw 3rem 3rem;
+}
+
+#description-paragraph {
+    text-align: justify !important;
+}

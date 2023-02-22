@@ -1,0 +1,56 @@
+@page
+@using AspDotNetRazorFirst.wwwroot.enums
+@model AspDotNetRazorFirst.Pages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+@section css {
+    <link href="@Url.Content("~/css/Details.css")" rel="stylesheet" asp-append-version="true"/>
+}
+
+@if (Model.Movie.MovieType == MovieType.Movie.ToString())
+ {
+     <h3 class="text-light mx-5">Informations sur le film</h3>
+ }
+else
+{
+    <h3 class="text-light mx-5">Informations sur la série</h3>
+}
+
+
+<<div class="delete-container">
+     <h4 class="text-light">@Model.Movie.MovieName</h4>
+     <hr/>
+     <dl class="row ">
+         @if (Model.Movie.MovieType == MovieType.Movie.ToString())
+         {
+             <dt class="col-sm-2">
+                 Date de Sortie du film
+             </dt>
+         }
+         else
+         {
+             <dt class="col-sm-2">
+                 Date de Sortie de la série
+             </dt>
+         }
+         <dd class="col-sm-10">
+             @Model.Movie.MovieDate.ToString("dd MMMM yyyy")
+         </dd>
+         <dt class="col-sm-2">
+             Synopsis
+         </dt>
+         <dd id="description-paragraph" class="col-sm-10 text-sm-start">
+             @Model.Movie.MovieDesc
+         </dd>
+     </dl>
+     
+     <button class="btn ms-4 px-2"><a asp-page="DetailsRecommandations" asp-route-name="@Model.Movie.MovieName">Trouver des films/séries similaires</a></button>
+     <form method="post">
+         <input type="submit" class="btn red-btn ms-4 px-2 my-4" value="Trouver des films/séries similaires">
+     </form>
+     <button class="btn ms-4 px-2"><a asp-page="Display">Retourner à l'annuaire</a></button>
+     
+</div>

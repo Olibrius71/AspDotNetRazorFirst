@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using AspDotNetRazorFirst;
 using AspDotNetRazorFirst.wwwroot.entities;
+using AspDotNetRazorFirst.wwwroot.enums;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AspDotNetRazorFirst.Pages
 {
@@ -22,6 +24,7 @@ namespace AspDotNetRazorFirst.Pages
         public IList<Movie> Movie { get;set; } = default!;
 
         public int NbFilms { get; set; } = 0;
+        public int NbSeries { get; set; } = 0;
 
         public async Task OnGetAsync()
         {
@@ -29,8 +32,11 @@ namespace AspDotNetRazorFirst.Pages
             {
                 Movie = await _context.Movies.ToListAsync();
 
-                NbFilms = Movie.Count;
+                NbFilms = Movie.Count(m => m.MovieType==MovieType.Movie.ToString());
+                NbSeries = Movie.Count(m => m.MovieType==MovieType.Series.ToString());
             }
         }
+
+        
     }
 }

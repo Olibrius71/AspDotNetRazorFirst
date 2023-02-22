@@ -107,5 +107,14 @@ public class WebScraper
                 throw new Exception("Erreur pour trouver le type, selectedcatname= "+ selectedCategoryName);
         }
     }
-    
+
+    public string GetFullPage()
+    {
+        var cells = document.QuerySelectorAll(".results.flex > card .title > div > a.result");
+        string href = cells.Select(m => m.Attributes["href"].Value).First();
+
+        string finalString = "https://www.themoviedb.org" + href + "";
+
+        return finalString;
+    }
 }
