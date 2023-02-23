@@ -17,19 +17,27 @@ public class WebScraper
     private static HttpClient _httpClient = new HttpClient();
     private string SearchUrl { get; set; } = "https://www.themoviedb.org/search?language=fr&query=";
 
-    public WebScraper(string movieName)
+    public WebScraper(string movieName, bool needIsToGetRecommandations = false, string searchUrl = null)
     {
-        string[] movieWords = movieName.Split(" ");
-        foreach (var word in movieWords)
+        if (!needIsToGetRecommandations)
         {
-            string finalWord = Regex.Replace(word, @"[#&,$¤£;:]", "");
-            SearchUrl += finalWord;
-            if (Array.IndexOf(movieWords,word) != movieWords.Length - 1)
+            string[] movieWords = movieName.Split(" ");
+            foreach (var word in movieWords)
             {
-                SearchUrl += "+";
+                string finalWord = Regex.Replace(word, @"[#&,$+¤£;:]", "");
+                SearchUrl += finalWord;
+                if (Array.IndexOf(movieWords, word) != movieWords.Length - 1)
+                {
+                    SearchUrl += "+";
+                }
             }
         }
+        else
+        {
+            SearchUrl = searchUrl;
+        }
     }
+
 
     public async Task GetHtml()
     {
@@ -92,7 +100,7 @@ public class WebScraper
     public string GetType()
     {
         var cells = document.QuerySelectorAll("#search_menu_scroller > ul > li");
-        var selectedCategory = cells.First(categ => categ.ClassList.Contains("selected")); // HasAttribute("Selected"));
+        var selectedCategory = cells.First(categ => categ.ClassList.Contains("selected"));
              
         string selectedCategoryName = selectedCategory.ChildNodes.OfType<IElement>().Select(m => m.TextContent).First();
         
@@ -108,13 +116,41 @@ public class WebScraper
         }
     }
 
-    public string GetFullPage()
+    public string GetFullMoviePageLink()
     {
-        var cells = document.QuerySelectorAll(".results.flex > card .title > div > a.result");
+        var cells = document.QuerySelectorAll(".results.flex > .card .details > .wrapper > .title > div > a.result");
         string href = cells.Select(m => m.Attributes["href"].Value).First();
+        href = href.Split("?")[0];
 
-        string finalString = "https://www.themoviedb.org" + href + "";
+        string finalLink = "https://www.themoviedb.org" + href;
+        
+        string movieName = GetTitle();
+        string[] movieWords = movieName.Split(" ");
 
-        return finalString;
+        foreach (var word in movieWords)
+        {
+            string finalWord = Regex.Replace(word, @"[#&,+$¤£;:]", "");
+            finalLink += (finalWord==""||finalWord=="-") ? "" : "-" + finalWord.ToLower();
+        }
+        
+        Console.WriteLine(finalLink);
+        return finalLink;
     }
+
+    public List<string> GetNewMoviesTitles()
+    {
+        var cells = document.QuerySelectorAll("#recommendation_scroller > .scroller > .item.mini_card");
+        var newMoviesTitlesElements = cells.Select(card =>
+            card.Children.First(ch => ch.TagName == "p").Children.First().Children.First());
+
+        List<string> newMoviesTitles = new List<string>();
+
+        foreach (var movieTitlesElement in newMoviesTitlesElements)
+        {
+            newMoviesTitles.Add(movieTitlesElement.TextContent);
+        }
+
+        return newMoviesTitles;
+    }
+        
 }
