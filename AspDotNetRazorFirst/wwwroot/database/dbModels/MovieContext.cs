@@ -15,7 +15,6 @@ public class MovieContext: DbContext
     public MovieContext(IConfiguration configuration)
     {
         Configuration = configuration;
-        NpgsqlConnection.GlobalTypeMapper.MapEnum<MovieType>("movie_type_enum");
     }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -29,7 +28,11 @@ public class MovieContext: DbContext
         modelBuilder.Entity<Movie>()
             .HasKey(m => m.MovieId);
 
-        modelBuilder.Entity<Movie>().Property(m => m.MovieName).IsRequired();
+        modelBuilder.Entity<Movie>()
+            .Property(m => m.MovieName).IsRequired();
+
+        modelBuilder.Entity<Movie>(m => m.HasIndex(movie => movie.MovieName).IsUnique());
+
     }
     
     public DbSet<Movie>? Movies { get; set; }

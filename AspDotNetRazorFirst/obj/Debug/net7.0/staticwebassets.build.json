@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zNshVAP5lxBjJGQKvojg6nj8ve2zXffbFaOUd6oEPXc=",
+  "Hash": "merWCYi16masPfh/8euVlm4HDcFPw6moDhMNyazipXc=",
   "Source": "AspDotNetRazorFirst",
   "BasePath": "_content/AspDotNetRazorFirst",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Details.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\css\\DetailsRecommandations.css",
+      "SourceId": "AspDotNetRazorFirst",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\",
+      "BasePath": "_content/AspDotNetRazorFirst",
+      "RelativePath": "css/DetailsRecommandations.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\DetailsRecommandations.css"
     },
     {
       "Identity": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\css\\Display.css",

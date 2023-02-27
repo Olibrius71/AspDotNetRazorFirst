@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 builder.Services.AddDbContext<MovieContext>(HostOptions => HostOptions.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -33,6 +33,8 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
+
+app.UseSession();
 
 
 app.Run();

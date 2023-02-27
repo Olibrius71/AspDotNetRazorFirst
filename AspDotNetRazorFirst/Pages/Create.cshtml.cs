@@ -24,12 +24,11 @@ namespace AspDotNetRazorFirst.Pages
         public Movie Movie { get; set; } = default!;
         
         
-
-
+        
         public async Task<IActionResult> OnPostAsync()
         {
             
-            WebScraper webScraper = new WebScraper(Movie.MovieName);
+            MovieDbWebScraper webScraper = new MovieDbWebScraper(Movie.MovieName);
             await webScraper.GetHtml();
             
             string finalMovieName = webScraper.GetTitle();

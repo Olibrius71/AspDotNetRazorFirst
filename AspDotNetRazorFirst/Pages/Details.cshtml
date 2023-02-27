@@ -1,5 +1,7 @@
 @page
 @using AspDotNetRazorFirst.wwwroot.enums
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Text.RegularExpressions
 @model AspDotNetRazorFirst.Pages.DetailsModel
 
 @{
@@ -47,10 +49,7 @@ else
          </dd>
      </dl>
      
-     <button class="btn ms-4 px-2"><a asp-page="DetailsRecommandations" asp-route-movieName="@Model.Movie.MovieName">Trouver des films/séries similaires</a></button>
-     <form method="post">
-         <input type="submit" class="btn red-btn ms-4 px-2 my-4" value="Trouver des films/séries similaires">
-     </form>
+     <button class="btn red-btn ms-4 px-2"><a asp-page="DetailsRecommandations" asp-route-movieName="@Model.CleanMovieName" asp-route-movieType="@Model.Movie.MovieType">Trouver des films/séries similaires</a></button>
      <button class="btn ms-4 px-2"><a asp-page="Display">Retourner à l'annuaire</a></button>
      
 </div>

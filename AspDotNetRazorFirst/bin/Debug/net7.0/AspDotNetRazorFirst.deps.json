@@ -35,14 +35,18 @@
     ".NETCoreApp,Version=v7.0": {
       "AspDotNetRazorFirst/1.0.0": {
         "dependencies": {
-          "AngleSharp": "1.0.1",
+          "AngleSharp": "1.0.2-alpha-278",
+          "jint": "2.10.4",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "7.0.3",
+          "Microsoft.AspNetCore.SpaServices.Extensions": "7.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.2",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.3",
           "Npgsql": "7.0.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.1",
+          "Selenium.WebDriver": "4.6.0",
+          "Selenium.WebDriver.ChromeDriver": "110.0.5481.3000",
           "Microsoft.AspNetCore.Antiforgery": "7.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "7.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "7.0.0.0",
@@ -145,11 +149,11 @@
           "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions": "7.0.0.0",
           "Microsoft.Extensions.Diagnostics.HealthChecks": "7.0.0.0",
           "Microsoft.Extensions.Features": "7.0.0.0",
-          "Microsoft.Extensions.FileProviders.Abstractions": "7.0.0.0",
+          "Microsoft.Extensions.FileProviders.Abstractions.Reference": "7.0.0.0",
           "Microsoft.Extensions.FileProviders.Composite": "7.0.0.0",
           "Microsoft.Extensions.FileProviders.Embedded": "7.0.0.0",
-          "Microsoft.Extensions.FileProviders.Physical": "7.0.0.0",
-          "Microsoft.Extensions.FileSystemGlobbing": "7.0.0.0",
+          "Microsoft.Extensions.FileProviders.Physical.Reference": "7.0.0.0",
+          "Microsoft.Extensions.FileSystemGlobbing.Reference": "7.0.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "7.0.0.0",
           "Microsoft.Extensions.Hosting": "7.0.0.0",
           "Microsoft.Extensions.Http": "7.0.0.0",
@@ -198,7 +202,7 @@
           "System.Data.Common": "7.0.0.0",
           "System.Data.DataSetExtensions.Reference": "4.0.0.0",
           "System.Data": "4.0.0.0",
-          "System.Diagnostics.Contracts": "7.0.0.0",
+          "System.Diagnostics.Contracts.Reference": "7.0.0.0",
           "System.Diagnostics.Debug.Reference": "7.0.0.0",
           "System.Diagnostics.DiagnosticSource.Reference": "7.0.0.0",
           "System.Diagnostics.EventLog": "7.0.0.0",
@@ -212,7 +216,7 @@
           "System": "4.0.0.0",
           "System.Drawing": "4.0.0.0",
           "System.Drawing.Primitives": "7.0.0.0",
-          "System.Dynamic.Runtime": "7.0.0.0",
+          "System.Dynamic.Runtime.Reference": "7.0.0.0",
           "System.Formats.Asn1.Reference": "7.0.0.0",
           "System.Formats.Tar": "7.0.0.0",
           "System.Globalization.Calendars.Reference": "7.0.0.0",
@@ -347,15 +351,14 @@
           "AspDotNetRazorFirst.dll": {}
         }
       },
-      "AngleSharp/1.0.1": {
+      "AngleSharp/1.0.2-alpha-278": {
         "dependencies": {
-          "System.Buffers": "4.5.1",
           "System.Text.Encoding.CodePages": "7.0.0"
         },
         "runtime": {
           "lib/net7.0/AngleSharp.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
           }
         },
         "compile": {
@@ -410,6 +413,23 @@
           }
         }
       },
+      "jint/2.10.4": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Diagnostics.Contracts": "4.0.1",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/jint.dll": {
+            "assemblyVersion": "2.10.4.0",
+            "fileVersion": "2.10.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/jint.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Mvc.Razor.Extensions/6.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Razor.Language": "6.0.11",
@@ -450,6 +470,20 @@
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Language.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.SpaServices.Extensions/7.0.3": {
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Physical": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.SpaServices.Extensions.dll": {
+            "assemblyVersion": "7.0.3.0",
+            "fileVersion": "7.0.323.8009"
+          }
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.AspNetCore.SpaServices.Extensions.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
@@ -1504,6 +1538,19 @@
           "lib/net7.0/Microsoft.Extensions.DependencyModel.dll": {}
         }
       },
+      "Microsoft.Extensions.FileProviders.Abstractions/7.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "7.0.0"
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Physical/7.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "7.0.0",
+          "Microsoft.Extensions.FileSystemGlobbing": "7.0.0",
+          "Microsoft.Extensions.Primitives": "7.0.0"
+        }
+      },
+      "Microsoft.Extensions.FileSystemGlobbing/7.0.0": {},
       "Microsoft.Extensions.Logging/7.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
@@ -2109,6 +2156,21 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "Selenium.WebDriver/4.6.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/net5.0/WebDriver.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/WebDriver.dll": {}
+        }
+      },
+      "Selenium.WebDriver.ChromeDriver/110.0.5481.3000": {},
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.2": {
         "dependencies": {
           "SQLitePCLRaw.lib.e_sqlite3": "2.1.2",
@@ -2406,6 +2468,11 @@
         }
       },
       "System.Data.DataSetExtensions/4.5.0": {},
+      "System.Diagnostics.Contracts/4.0.1": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Diagnostics.Debug/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
@@ -2454,6 +2521,25 @@
         },
         "compile": {
           "lib/net6.0/System.Drawing.Common.dll": {}
+        }
+      },
+      "System.Dynamic.Runtime/4.0.11": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.ObjectModel": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
         }
       },
       "System.Formats.Asn1/5.0.0": {},
@@ -3694,7 +3780,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.FileProviders.Abstractions/7.0.0.0": {
+      "Microsoft.Extensions.FileProviders.Abstractions.Reference/7.0.0.0": {
         "compile": {
           "Microsoft.Extensions.FileProviders.Abstractions.dll": {}
         },
@@ -3712,13 +3798,13 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.FileProviders.Physical/7.0.0.0": {
+      "Microsoft.Extensions.FileProviders.Physical.Reference/7.0.0.0": {
         "compile": {
           "Microsoft.Extensions.FileProviders.Physical.dll": {}
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.FileSystemGlobbing/7.0.0.0": {
+      "Microsoft.Extensions.FileSystemGlobbing.Reference/7.0.0.0": {
         "compile": {
           "Microsoft.Extensions.FileSystemGlobbing.dll": {}
         },
@@ -4012,7 +4098,7 @@
         },
         "compileOnly": true
       },
-      "System.Diagnostics.Contracts/7.0.0.0": {
+      "System.Diagnostics.Contracts.Reference/7.0.0.0": {
         "compile": {
           "System.Diagnostics.Contracts.dll": {}
         },
@@ -4096,7 +4182,7 @@
         },
         "compileOnly": true
       },
-      "System.Dynamic.Runtime/7.0.0.0": {
+      "System.Dynamic.Runtime.Reference/7.0.0.0": {
         "compile": {
           "System.Dynamic.Runtime.dll": {}
         },
@@ -4866,12 +4952,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AngleSharp/1.0.1": {
+    "AngleSharp/1.0.2-alpha-278": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-uIezZhHZqWEb4zw/D5Xnskqb/sivIFwfWcUX2srPWTE10IYahfrdhWTIk859BpEmPmxSlMoL+S0JimFTaWGaHA==",
-      "path": "anglesharp/1.0.1",
-      "hashPath": "anglesharp.1.0.1.nupkg.sha512"
+      "sha512": "sha512-BRYSIrYxhR8xaYTU+tqJN+1r3JJEaHRETztEAiv7yCxZt9Kq1fx/KL3aNdTspHeZ9v48WTvvCheXh9KAdHF0tw==",
+      "path": "anglesharp/1.0.2-alpha-278",
+      "hashPath": "anglesharp.1.0.2-alpha-278.nupkg.sha512"
     },
     "Azure.Core/1.24.0": {
       "type": "package",
@@ -4894,6 +4980,13 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
+    "jint/2.10.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PJ20tSyhW0AafikDa2CpiGv5c5DZ9Q20v7EXRiCLl+G+MNoMpggAeW0T03S/xUk6rj1zl29HbfpsVWlcq6DEDA==",
+      "path": "jint/2.10.4",
+      "hashPath": "jint.2.10.4.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Mvc.Razor.Extensions/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -4914,6 +5007,13 @@
       "sha512": "sha512-SPjSZIL7JFI5XbVfRMPG/fHLr/xfumSrmN+IOimyIf71WQQ8u2hpaE5+VvpcgjJ5VrJMhfDEhdEAB+Nj/S16dQ==",
       "path": "microsoft.aspnetcore.razor.language/6.0.11",
       "hashPath": "microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.SpaServices.Extensions/7.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dh2ZmM+4Y3b3pCBndGuvpBIp1OOOK+CeZruphDKoFWgmxfN/RYmV0QvOS3u1McVb1yFmcVcXgVx0DEW5+WRkFg==",
+      "path": "microsoft.aspnetcore.spaservices.extensions/7.0.3",
+      "hashPath": "microsoft.aspnetcore.spaservices.extensions.7.0.3.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
       "type": "package",
@@ -5194,6 +5294,27 @@
       "sha512": "sha512-oONNYd71J3LzkWc4fUHl3SvMfiQMYUCo/mDHDEu76hYYxdhdrPYv6fvGv9nnKVyhE9P0h20AU8RZB5OOWQcAXg==",
       "path": "microsoft.extensions.dependencymodel/7.0.0",
       "hashPath": "microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NyawiW9ZT/liQb34k9YqBSNPLuuPkrjMgQZ24Y/xXX1RoiBkLUdPMaQTmxhZ5TYu8ZKZ9qayzil75JX95vGQUg==",
+      "path": "microsoft.extensions.fileproviders.abstractions/7.0.0",
+      "hashPath": "microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.FileProviders.Physical/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K8D2MTR+EtzkbZ8z80LrG7Ur64R7ZZdRLt1J5cgpc/pUWl0C6IkAUapPuK28oionHueCPELUqq0oYEvZfalNdg==",
+      "path": "microsoft.extensions.fileproviders.physical/7.0.0",
+      "hashPath": "microsoft.extensions.fileproviders.physical.7.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.FileSystemGlobbing/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2jONjKHiF+E92ynz2ZFcr9OvxIw+rTGMPEH+UZGeHTEComVav93jQUWGkso8yWwVBcEJGcNcZAaqY01FFJcj7w==",
+      "path": "microsoft.extensions.filesystemglobbing/7.0.0",
+      "hashPath": "microsoft.extensions.filesystemglobbing.7.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging/7.0.0": {
       "type": "package",
@@ -5587,6 +5708,20 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
+    "Selenium.WebDriver/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wdkzNyVYvdI0YOeScP42ubshPOjY7dj8aXHyetlhVTqKo5gAbYnOJU//W5q0hVSVw4hsisNvgR/UQqPvgM8rew==",
+      "path": "selenium.webdriver/4.6.0",
+      "hashPath": "selenium.webdriver.4.6.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver.ChromeDriver/110.0.5481.3000": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cIAVFri/b/wOWuToNqMwPfx2j42ST3QU0+yv8JMN8+h09O5DSB/LGLWqz9FVjWr69QSODPUDUmOIDJy/cQm6WQ==",
+      "path": "selenium.webdriver.chromedriver/110.0.5481.3000",
+      "hashPath": "selenium.webdriver.chromedriver.110.0.5481.3000.nupkg.sha512"
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -5720,6 +5855,13 @@
       "path": "system.data.datasetextensions/4.5.0",
       "hashPath": "system.data.datasetextensions.4.5.0.nupkg.sha512"
     },
+    "System.Diagnostics.Contracts/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HvQQjy712vnlpPxaloZYkuE78Gn353L0SJLJVeLcNASeg9c4qla2a1Xq8I7B3jZoDzKPtHTkyVO7AZ5tpeQGuA==",
+      "path": "system.diagnostics.contracts/4.0.1",
+      "hashPath": "system.diagnostics.contracts.4.0.1.nupkg.sha512"
+    },
     "System.Diagnostics.Debug/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -5754,6 +5896,13 @@
       "sha512": "sha512-NfuoKUiP2nUWwKZN6twGqXioIe1zVD0RIj2t976A+czLHr2nY454RwwXs6JU9Htc6mwqL6Dn/nEL3dpVf2jOhg==",
       "path": "system.drawing.common/6.0.0",
       "hashPath": "system.drawing.common.6.0.0.nupkg.sha512"
+    },
+    "System.Dynamic.Runtime/4.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-db34f6LHYM0U0JpE+sOmjar27BnqTVkbLJhgfwMpTdgTigG/Hna3m2MYVwnFzGGKnEJk2UXFuoVTr8WUbU91/A==",
+      "path": "system.dynamic.runtime/4.0.11",
+      "hashPath": "system.dynamic.runtime.4.0.11.nupkg.sha512"
     },
     "System.Formats.Asn1/5.0.0": {
       "type": "package",
@@ -6720,7 +6869,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.FileProviders.Abstractions/7.0.0.0": {
+    "Microsoft.Extensions.FileProviders.Abstractions.Reference/7.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6735,12 +6884,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.FileProviders.Physical/7.0.0.0": {
+    "Microsoft.Extensions.FileProviders.Physical.Reference/7.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.FileSystemGlobbing/7.0.0.0": {
+    "Microsoft.Extensions.FileSystemGlobbing.Reference/7.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6985,7 +7134,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Diagnostics.Contracts/7.0.0.0": {
+    "System.Diagnostics.Contracts.Reference/7.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -7055,7 +7204,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Dynamic.Runtime/7.0.0.0": {
+    "System.Dynamic.Runtime.Reference/7.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

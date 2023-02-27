@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -20,7 +21,9 @@ namespace AspDotNetRazorFirst.Pages
             _context = context;
         }
 
-        public Movie Movie { get; set; } = default!; 
+        public Movie Movie { get; set; } = default!;
+
+        public string CleanMovieName { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -37,6 +40,8 @@ namespace AspDotNetRazorFirst.Pages
             else 
             {
                 Movie = movie;
+                CleanMovieName = Regex.Replace(Movie.MovieName, @"[#&,$+¤£;:]", "");
+                CleanMovieName = CleanMovieName.Replace("  ", " ");
             }
             return Page();
         }

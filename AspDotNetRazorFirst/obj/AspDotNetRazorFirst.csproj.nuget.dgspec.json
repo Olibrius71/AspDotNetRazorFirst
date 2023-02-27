@@ -42,9 +42,17 @@
           "dependencies": {
             "AngleSharp": {
               "target": "Package",
-              "version": "[1.0.1, )"
+              "version": "[1.0.2-alpha-278, )"
+            },
+            "Jint": {
+              "target": "Package",
+              "version": "[2.10.4, )"
             },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.AspNetCore.SpaServices.Extensions": {
               "target": "Package",
               "version": "[7.0.3, )"
             },
@@ -73,6 +81,14 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.1, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[110.0.5481.3000, )"
             }
           },
           "imports": [

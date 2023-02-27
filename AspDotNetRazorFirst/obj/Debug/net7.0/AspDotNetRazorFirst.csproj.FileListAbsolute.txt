@@ -602,3 +602,9 @@ C:\Users\Anis\Documents\Rider_bouffon\AspDotNetRazorFirst\AspDotNetRazorFirst\bi
 C:\Users\Anis\Documents\Rider_bouffon\AspDotNetRazorFirst\AspDotNetRazorFirst\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\Users\Anis\Documents\Rider_bouffon\AspDotNetRazorFirst\AspDotNetRazorFirst\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\Users\Anis\Documents\Rider_bouffon\AspDotNetRazorFirst\AspDotNetRazorFirst\obj\Debug\net7.0\AspDotNetRazorFirst.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Anis\Documents\Rider_bouffon\AspDotNetRazorFirst\AspDotNetRazorFirst\bin\Debug\net7.0\jint.dll
+C:\Users\Anis\Documents\Rider_bouffon\AspDotNetRazorFirst\AspDotNetRazorFirst\bin\Debug\net7.0\selenium-manager\linux\selenium-manager
+C:\Users\Anis\Documents\Rider_bouffon\AspDotNetRazorFirst\AspDotNetRazorFirst\bin\Debug\net7.0\selenium-manager\macos\selenium-manager
+C:\Users\Anis\Documents\Rider_bouffon\AspDotNetRazorFirst\AspDotNetRazorFirst\bin\Debug\net7.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\Anis\Documents\Rider_bouffon\AspDotNetRazorFirst\AspDotNetRazorFirst\bin\Debug\net7.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
+C:\Users\Anis\Documents\Rider_bouffon\AspDotNetRazorFirst\AspDotNetRazorFirst\bin\Debug\net7.0\WebDriver.dll

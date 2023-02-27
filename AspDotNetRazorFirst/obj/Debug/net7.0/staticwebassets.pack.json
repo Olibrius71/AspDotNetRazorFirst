@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\Details.css"
     },
     {
+      "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\css\\DetailsRecommandations.css",
+      "PackagePath": "staticwebassets\\css\\DetailsRecommandations.css"
+    },
+    {
       "Id": "C:\\Users\\Anis\\Documents\\Rider_bouffon\\AspDotNetRazorFirst\\AspDotNetRazorFirst\\wwwroot\\css\\Display.css",
       "PackagePath": "staticwebassets\\css\\Display.css"
     },
