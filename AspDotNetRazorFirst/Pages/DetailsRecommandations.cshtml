@@ -23,7 +23,7 @@
         @foreach (var movieToPossiblyAdd in @Model.NewMovies)
         {
             <div class="new-movie-container my-3">
-                <div class="new-movie-image-container">
+                <div class="new-movie-image-container py-1">
                     <img src="data:image;base64,@Convert.ToBase64String(movieToPossiblyAdd.MovieImageData)" class="new-movie-image"/>
                 </div>
                 <div class="new-movie-information-container">
@@ -31,6 +31,7 @@
                     <p class="new-movie-description text-light mx-2">@movieToPossiblyAdd.MovieDesc</p>
                 </div>
                 <div class="new-movie-confirm-container">
+                    <div class="new-movie-confirm-information text-light">AJOUTER</div>
                     <input class="new-movie-confirm form-check-input" type="checkbox" name="newMoviesToAdd" value="@movieAddIndex"/>
                 </div>
             </div>
@@ -39,5 +40,5 @@
     </div>
     <button class="btn red-btn ms-4 px-2 my-4" type="submit">Ajouter les films/séries sélectionné(e)s</button>
     </form>
-     <button class="btn ms-4 px-2"><a asp-page="Display">Retourner à l'annuaire</a></button>
+     <button class="btn ms-4 px-2 mb-4"><a asp-page="Display">Retourner à l'annuaire</a></button>
 </div>
