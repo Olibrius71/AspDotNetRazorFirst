@@ -1,4 +1,5 @@
 @page
+@using AspDotNetRazorFirst.wwwroot.entities
 @model DisplayModel
 
 @{
@@ -20,10 +21,12 @@
     <section class="container-fluid main-container p-0">
         <div id="button-container" class="row mx-0">
             <button id="add-button" class="btn m-3 px-2"><a asp-page="Create">AJOUTER UN FILM</a></button>
-
+            <form method="post">
+                <input type="submit"/>
+            </form>
         </div>
         <section class="container-fluid movies-container">
-            @if (Model.NbFilms != 0)
+            @if (Model.NbFilms != 0 || Model.NbSeries != 0)
             {
                 foreach (var item in Model.Movie) {
                     <div class="movie-div">

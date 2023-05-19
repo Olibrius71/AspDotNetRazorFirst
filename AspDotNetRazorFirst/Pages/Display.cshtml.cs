@@ -38,5 +38,17 @@ namespace AspDotNetRazorFirst.Pages
         }
 
         
+        public async Task OnPostAsync()
+        {
+            if (_context.Movies != null)
+            {
+                Movie = await _context.Movies.Where(movie => movie.MovieType == MovieType.Series.ToString()).ToListAsync();
+
+                NbFilms = Movie.Count(m => m.MovieType==MovieType.Movie.ToString());
+                NbSeries = Movie.Count(m => m.MovieType==MovieType.Series.ToString());
+            }
+        }
+
+        
     }
 }
