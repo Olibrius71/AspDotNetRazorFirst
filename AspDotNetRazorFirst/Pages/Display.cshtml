@@ -1,5 +1,6 @@
 @page
 @using AspDotNetRazorFirst.wwwroot.entities
+@using AspDotNetRazorFirst.wwwroot.enums
 @model DisplayModel
 
 @{
@@ -20,10 +21,21 @@
     
     <section class="container-fluid main-container p-0">
         <div id="button-container" class="row mx-0">
-            <button id="add-button" class="btn m-3 px-2"><a asp-page="Create">AJOUTER UN FILM</a></button>
-            <form method="post">
-                <input type="submit"/>
-            </form>
+            <button id="add-button" class="btn my-4 px-2">
+                <a asp-page="Create">AJOUTER UN FILM</a>
+            </button>
+            <button class="btn red-btn mx-4 px-2">
+                <a class="display-mode-link" asp-page="" asp-route-displayMode="@MovieType.Movie.ToString()">SEULEMENT FILMS</a>
+            </button>
+            <button class="btn red-btn my-4 px-2">
+                <a class="display-mode-link" asp-page="" asp-route-displayMode="@MovieType.Series.ToString()">SEULEMENT SERIES</a>
+            </button>
+            @if (@Model.DisplayMode != null)
+            {
+                <button class="btn mx-5 my-4 px-2">
+                    <a class="display-mode-link" asp-page="" asp-route-displayMode="">ANNULER</a>
+                </button>
+            }
         </div>
         <section class="container-fluid movies-container">
             @if (Model.NbFilms != 0 || Model.NbSeries != 0)

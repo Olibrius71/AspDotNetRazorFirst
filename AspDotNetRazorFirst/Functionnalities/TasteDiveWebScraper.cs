@@ -46,7 +46,10 @@ public class TasteDiveWebScraper : WebScraper
 
     public void InitializeCards()
     {
-        cardsContainer = document.QuerySelectorAll("h2").First(c => c.TextContent.Contains("Similar Movies") || c.TextContent.Contains("Similar TV shows"))
+        Console.WriteLine(SearchUrl);
+        Console.WriteLine(document.Body.QuerySelectorAll("h2").First().TextContent + document.Body.QuerySelectorAll("h2").Skip(1).First().TextContent);
+        cardsContainer = document.Body.QuerySelectorAll("h2").Skip(1).First()
+            .ParentElement
             .NextElementSibling
             .NextElementSibling
             .Children.ElementAt(2)
