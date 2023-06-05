@@ -18,7 +18,7 @@ DEMONSTRATION OF THE APPLICATION IN ENGLISH BELOW
 
 
 
-Démonstration de l'application: (Nombre de commits du code depuis la démonstration: 0 (C'est ainsi la version la plus récente à ce jour))
+Démonstration de l'application: (Nombre de commits du code depuis la démonstration: 1 (Dzns l'affichage, La possibilité de filtrer selon le type (Films ou Séries) a été ajoutée))
 
 
 https://user-images.githubusercontent.com/103257217/221966940-3d790dcd-66b3-4d65-9c4b-3825d55246c4.mp4
@@ -30,7 +30,7 @@ https://user-images.githubusercontent.com/103257217/221966940-3d790dcd-66b3-4d65
 
 
 
-Demonstration of the app: (Number of commits of the code since the demonstration: 0 (This is the most recent version to this day)):
+Demonstration of the app: (Number of commits of the code since the demonstration: 1 (In the Display, The possibility to filter according to the type (Movie or Series) has been added)):
 
 
 https://user-images.githubusercontent.com/103257217/221967132-8637eb81-c7c4-4b08-a114-20ac33bea7e4.mp4
